@@ -19,7 +19,7 @@ def search(request):
     return HttpResponse("we are at search")
 
 def productView(request):
-    return HttpResponse("we are at productView")
+    return HttpResponse("we are at product View")
 
 def checkout(request):
     return HttpResponse("we are at checkout")
