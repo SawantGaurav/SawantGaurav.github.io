@@ -8,16 +8,16 @@ from . models import Product
 # Create your views here.
 
 def index(request):
-    # return render(request ,'shop/index.html')
+    return render(request ,'shop/index.html')
     
-    product = Product.objects.all()
+    # product = Product.objects.all()
     
-    context={'product':product}
+    # context={'product':product}
     
-    return render(request, "shop/index.html",context)
+    # return render(request, "shop/index.html",context)
 
 def about(request):
-    return HttpResponse("we are at about")
+    return render(request ,'shop/about.html')
 
 def contact(request):
     return HttpResponse("we are at contact")
