@@ -1,10 +1,20 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.template.response import TemplateResponse
+from . models import Product
+
+
 
 # Create your views here.
 
 def index(request):
-    return render(request ,'shop/index.html')
+    # return render(request ,'shop/index.html')
+    
+    product = Product.objects.all()
+    
+    context={'product':product}
+    
+    return render(request, "shop/index.html",context)
 
 def about(request):
     return HttpResponse("we are at about")

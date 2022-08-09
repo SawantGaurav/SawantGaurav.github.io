@@ -38,6 +38,8 @@
 </head>
 <body>
 {% load static %}
+{% csrf_token %}
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 <a class="navbar-brand" href="#">SG_Fruits</a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -235,6 +237,13 @@
   <a class="carousel-control-next" href="#demo" data-slide="next">
       <span class="carousel-control-next-icon"></span>
   </a>
+
+  {% comment %} list {% endcomment %}
+
+  {% for item in product %}
+           <h1>{{ item.price}}</h1>
+           <p>{{ item.product_name }}</p>
+        {% endfor %}
 
 
 
